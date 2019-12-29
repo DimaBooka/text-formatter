@@ -1,6 +1,6 @@
 <div class="text-manager"
      [innerHTML]="text"
-     (window:mouseup)="showSelectedText($event)"
+     (window:mouseup)="detectHighlightedIndexes($event)"
      (blur)="resetSelectedIndexes()"
 ></div>
 
