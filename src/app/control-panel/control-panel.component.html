@@ -1,5 +1,5 @@
-<div class="format-actions">
-  <button class="format-action" type="button"><b>B</b></button>
-  <button class="format-action" type="button"><i>I</i></button>
-  <button class="format-action" type="button"><u>U</u></button>
+<div class="format-actions" (mouseup)="preventEvent($event, true)">
+  <button class="format-action" type="button" (mouseup)="emit($event, styles.bold)"><b>B</b></button>
+  <button class="format-action" type="button" (mouseup)="emit($event, styles.italic)"><i>I</i></button>
+  <button class="format-action" type="button" (mouseup)="emit($event, styles.underline)"><u>U</u></button>
 </div>

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular/core';
+import {TextStyles} from '../models/text-styles';
 
 @Component({
   selector: 'app-control-panel',
@@ -7,4 +8,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ControlPanelComponent {
+  @Output() onSetStyle: EventEmitter<TextStyles> = new EventEmitter();
+
+  styles = TextStyles;
+
+  preventEvent(event: Event, withEmit = false) {
+    event.cancelBubble = true;
+    event.stopPropagation();
+    event.preventDefault();
+
+    if (withEmit) {
+      this.onSetStyle.emit();
+    }
+  }
+
+  emit(event: Event, style: TextStyles) {
+    this.preventEvent(event);
+    this.onSetStyle.emit(style);
+  }
 }

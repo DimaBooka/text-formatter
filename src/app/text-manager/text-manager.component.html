@@ -1,0 +1,11 @@
+<div class="text-manager"
+     [innerHTML]="text"
+     (window:mouseup)="showSelectedText($event)"
+     (blur)="resetSelectedIndexes()"
+></div>
+
+<div class="controls" [hidden]="!selectedIndexes" #controls>
+  <app-control-panel
+    (onSetStyle)="onSetStyleHandler($event)"
+  ></app-control-panel>
+</div>

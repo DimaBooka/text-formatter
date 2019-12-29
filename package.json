@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "c": "ng g component text-manager"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +41,7 @@
     "karma-coverage-istanbul-reporter": "^2.0.4",
     "karma-jasmine": "^2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "node-sass": "^4.13.0",
     "protractor": "^5.4.2",
     "ts-node": "^8.0.2",
     "tslint": "^5.12.1",

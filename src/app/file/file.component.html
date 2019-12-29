@@ -1,3 +1,5 @@
 <div class="file">
-  {{text$ | async}}
+  <app-text-manager
+    [text]="text$ | async"
+  ></app-text-manager>
 </div>
