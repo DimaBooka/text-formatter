@@ -1,3 +1,15 @@
+Spent time: 3hours 2minute.
+
+Was decided to focus on styling not by one word, but styling highlighted phrase.
+So when user highlights text - the control panel appears and user can set Bold, Italic, Underline.
+
+It is not production-ready :D, so there is a bug with detection indexes of text to be styled after already added tags.
+To fix this bug necessary to split text by tags(like in Gmail did). And when one more tag have to be added to text needs to split the substring to smaller substrings and close the tags in correct order.
+
+=======================
+
+Default README:
+
 # AeFrontendTexteditorAngularSkeleton
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
